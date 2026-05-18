@@ -40,7 +40,7 @@ class MainTabBarController: UITabBarController {
     }
 
     private func makeHomeVC() -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "HomeViewController")
     }
 }

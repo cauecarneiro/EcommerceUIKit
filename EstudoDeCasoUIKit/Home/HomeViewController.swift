@@ -4,10 +4,10 @@
 //
 //  Created by Cauê Carneiro on 14/05/26.
 //
+//  Implementação via Storyboard
 
 import UIKit
 
-// MARK: - Implementação via Storyboard
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {

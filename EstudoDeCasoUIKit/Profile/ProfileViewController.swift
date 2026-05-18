@@ -4,10 +4,10 @@
 //
 //  Created by Cauê Carneiro on 14/05/26.
 //
+//   Implementação via UIKit ViewCode
 
 import UIKit
 
-// MARK: - Implementação via UIKit ViewCode
 class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {

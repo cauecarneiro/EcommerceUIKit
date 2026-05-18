@@ -4,11 +4,11 @@
 //
 //  Created by Cauê Carneiro on 14/05/26.
 //
+//  Implementação via SwiftUI com ciclo de vida UIKit
 
 import UIKit
 import SwiftUI
 
-// MARK: - Implementação via SwiftUI com ciclo de vida UIKit
 class CartViewController: UIViewController {
 
     override func viewDidLoad() {
