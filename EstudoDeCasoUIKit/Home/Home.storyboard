@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hom-VC-001">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="Hom-SC-001">
+        <scene sceneID="HSC">
             <objects>
-                <viewController id="Hom-VC-001" customClass="HomeViewController" customModuleProvider="target" storyboardIdentifier="HomeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hom-VW-001">
+                <viewController id="HVC" customClass="HomeViewController" customModuleProvider="target" storyboardIdentifier="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HVW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" style="insetGrouped" translatesAutoresizingMaskIntoConstraints="NO" id="HTV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HVC" id="OHTVDS"/>
+                                    <outlet property="delegate" destination="HVC" id="OHTVDL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Hom-SA-001"/>
+                        <constraints>
+                            <constraint firstItem="HTV" firstAttribute="top" secondItem="HSA" secondAttribute="top" id="CT1"/>
+                            <constraint firstItem="HTV" firstAttribute="leading" secondItem="HVW" secondAttribute="leading" id="CT2"/>
+                            <constraint firstItem="HTV" firstAttribute="trailing" secondItem="HVW" secondAttribute="trailing" id="CT3"/>
+                            <constraint firstItem="HTV" firstAttribute="bottom" secondItem="HVW" secondAttribute="bottom" id="CT4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HSA"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="HTV" id="OHTV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hom-FR-001" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HFR" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
